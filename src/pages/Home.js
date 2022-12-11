@@ -32,14 +32,24 @@ const Home = () => {
         });
         // navigate(`/editor/${roomId}`, { state: {username}})
     }
+
+    // Enter 
+
+    const inputEnterHandler = (e) => {
+        console.log('Event', e.code);
+        if(e.code === 'Enter'){
+            joinRoom();
+        }
+    }
+
     return (
         <div className="homePageWrapper">
             <div className="formWrapper">
                 <img src="/code-sync.png" alt="code sync logo" />
                 <h4 className="mainLebel">Paste Invitation ROO</h4>
                 <div className="inputGroup">
-                    <input type="text" className="inputBox" placeholder="ROOM ID" value={roomId} onChange = { (e) => setRoomId(e.target.value)} />
-                    <input type="text" className="inputBox" placeholder="USERNAME" value={username} onChange = { (e) => setUsername(e.target.value)} />
+                    <input type="text" className="inputBox" placeholder="ROOM ID" value={roomId} onChange = { (e) => setRoomId(e.target.value)} onKeyUp={inputEnterHandler} />
+                    <input type="text" className="inputBox" placeholder="USERNAME" value={username} onChange = { (e) => setUsername(e.target.value)} onKeyUp={inputEnterHandler} />
                     <button className="btn joinBtn" onClick={joinRoom}>Join</button>
                     <span className="createInfo">
                         If you don't have an invite then create &nbsp; <a href="" onClick={createNewRoom} className="createNewBtn">new room</a>

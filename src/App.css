@@ -92,6 +92,7 @@ footer a:hover {
 .mainWrap {
   display: grid;
   grid-template-columns: 230px 1fr;
+  height: 100vh;
 }
 
 .aside {
@@ -120,6 +121,8 @@ footer a:hover {
 }
 .userName {
   margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 300;
 }
 
 .logo {

@@ -10,17 +10,16 @@ const App = () => {
    return (
       <>
          <div>
-            {/* <Toaster position="top-right" toastOptions={{success:{theme:{primary:'#4aed88'}}}}> </Toaster> */}
             <Toaster
-                    position="top-right"
-                    toastOptions={{
-                        success: {
-                            theme: {
-                                primary: '#4aed88',
-                            },
+               position="top-right"
+               toastOptions={{
+                  success: {
+                        theme: {
+                           primary: '#4aed88',
                         },
-                    }}
-                ></Toaster>
+                  },
+               }}
+            ></Toaster>
          </div>
          <BrowserRouter>
             <Routes>
